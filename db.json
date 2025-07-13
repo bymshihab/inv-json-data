@@ -1,0 +1,197 @@
+{
+  "products": [
+    { "id": 1, "name": "Laptop", "category": "Electronics", "stock": 10, "price": 800 },
+    { "id": 2, "name": "Rice Bag", "category": "Grocery", "stock": 50, "price": 40 },
+    { "id": 3, "name": "LED Bulb", "category": "Electronics", "stock": 100, "price": 5 }
+  ],
+
+  "sales": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "date": "2025-07-12",
+      "items": [{ "productId": 1, "qty": 1 }],
+      "total": 800,
+      "paymentMethod": "cash",
+      "bankId": null,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "date": "2025-07-13",
+      "items": [{ "productId": 2, "qty": 5 }],
+      "total": 200,
+      "paymentMethod": "bank",
+      "bankId": 1,
+      "paymentStatus": "due"
+    }
+  ],
+
+  "purchases": [
+    {
+      "id": 1,
+      "supplierId": 1,
+      "date": "2025-07-10",
+      "items": [{ "productId": 2, "qty": 30 }],
+      "total": 1200,
+      "paymentMethod": "cash",
+      "bankId": null,
+      "paymentStatus": "paid"
+    },
+    {
+      "id": 2,
+      "supplierId": 2,
+      "date": "2025-07-11",
+      "items": [{ "productId": 3, "qty": 50 }],
+      "total": 250,
+      "paymentMethod": "bank",
+      "bankId": 2,
+      "paymentStatus": "due"
+    }
+  ],
+
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "01700000001",
+      "address": "Dhaka",
+      "advance": 0
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "phone": "01700000002",
+      "address": "Chittagong",
+      "advance": 100
+    }
+  ],
+
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "ABC Traders",
+      "contact": "01800000001",
+      "address": "Khulna"
+    },
+    {
+      "id": 2,
+      "name": "XYZ Wholesalers",
+      "contact": "01800000002",
+      "address": "Rajshahi"
+    }
+  ],
+
+  "bankAccounts": [
+    {
+      "id": 1,
+      "bankName": "DBBL",
+      "accountNumber": "123456789",
+      "balance": 5000
+    },
+    {
+      "id": 2,
+      "bankName": "Brac Bank",
+      "accountNumber": "987654321",
+      "balance": 10000
+    }
+  ],
+
+  "bankTransactions": [
+    {
+      "id": 1,
+      "type": "withdrawal",
+      "amount": 250,
+      "bankId": 2,
+      "purpose": "Purchase Payment",
+      "refType": "purchase",
+      "refId": 2,
+      "date": "2025-07-11"
+    },
+    {
+      "id": 2,
+      "type": "deposit",
+      "amount": 200,
+      "bankId": 1,
+      "purpose": "Sale Collection",
+      "refType": "sale",
+      "refId": 2,
+      "date": "2025-07-13"
+    }
+  ],
+
+  "advancePayments": [
+    {
+      "id": 1,
+      "customerId": 2,
+      "amount": 100,
+      "date": "2025-07-10",
+      "note": "Advance for order #2"
+    }
+  ],
+
+  "loans": [
+    {
+      "id": 1,
+      "lender": "City Bank",
+      "amount": 10000,
+      "issueDate": "2025-06-01",
+      "interestRate": 10,
+      "dueDate": "2025-12-01",
+      "paidAmount": 2000
+    }
+  ],
+
+  "notifications": [
+    {
+      "id": 1,
+      "type": "email",
+      "to": "john@example.com",
+      "message": "Your payment is due",
+      "date": "2025-07-13"
+    },
+    {
+      "id": 2,
+      "type": "sms",
+      "to": "01700000002",
+      "message": "Thanks for your advance payment",
+      "date": "2025-07-10"
+    }
+  ],
+
+  "roles": [
+    { "id": 1, "name": "Admin" },
+    { "id": 2, "name": "Salesperson" },
+    { "id": 3, "name": "Accountant" }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "roleId": 1,
+      "email": "admin@business.com",
+      "name": "System Admin"
+    },
+    {
+      "id": 2,
+      "username": "sales1",
+      "password": "sales123",
+      "roleId": 2,
+      "email": "sales1@business.com",
+      "name": "Sales Person 1"
+    },
+    {
+      "id": 3,
+      "username": "account1",
+      "password": "account123",
+      "roleId": 3,
+      "email": "account1@business.com",
+      "name": "Accountant 1"
+    }
+  ]
+}
